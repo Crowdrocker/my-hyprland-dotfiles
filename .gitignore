@@ -113,3 +113,31 @@ docs/.vitepress/cache
 
 # devicon
 docs/.vitepress/devicon
+
+nano .gitignore
+```
+
+Paste this:
+```
+# Cache and temporary files
+**/.cache/
+**/cache/
+**/*.log
+**/__pycache__/
+
+# ML4W settings app data
+**/com.ml4w.hyprlandsettings/
+
+# Sensitive files
+**/*secret*
+**/*password*
+**/*token*
+*.key
+*.pem
+
+# Temporary files
+*~
+*.swp
+*.swo
+
+
