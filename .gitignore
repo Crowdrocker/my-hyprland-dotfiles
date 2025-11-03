@@ -1,0 +1,11 @@
+# Ignore cache and state files
+**/.cache/
+**/cache/
+**/*.log
+**/com.ml4w.hyprlandsettings/
+**/__pycache__/
+
+# Ignore sensitive files
+**/*secret*
+**/*password*
+**/*token*
