@@ -47,336 +47,48 @@
 
 ---
 
-## 🌟 Features
+# My Hyprland Dotfiles
 
-### 🎨 **Visual Design**
-- **J.A.R.V.I.S. inspired theme** with violet-to-cyan gradients
-- **Custom Waybar** with brand colors and animations
-- **Smooth animations** and blur effects
-- **TokyoNight terminal** theme
-- **Sugar Candy SDDM** login theme
+Personal Hyprland setup based on ML4W dotfiles with custom modifications.
 
-### 🎮 **Gaming Optimized**
-- **AMD RX 580 optimizations** (RADV, SAM, DXVK Async)
-- **GameMode integration** with audio notifications
-- **Steam/Lutris ready** with optimized launch options
-- **MangoHUD** performance overlay
-- **SteamTinkerLaunch** for mod support
+## Hardware
+- CPU: Intel i7-4790
+- GPU: AMD RX 580 8GB
+- RAM: 16GB DDR3
+- Storage: 1TB SSD + 2x 500GB SSD
 
-### 📸 **Creative Workflow**
-- **Photography suite**: GIMP, RAW processors, Krita
-- **Vector graphics**: Inkscape with custom shortcuts
-- **File organization** for WehttamSnaps brand projects
-- **Color-coded workspaces** for different tasks
+## Features
+- Gaming mode toggle (Super + F3) - disables animations/blur for performance
+- AMD GPU optimizations
+- Dual-boot with Windows 10
+- Custom keybinds and workflow tweaks
 
-### 🎵 **Pro Audio**
-- **PipeWire** with advanced routing (VoiceMeeter alternative)
-- **Separate audio streams** for gaming, Discord, streaming
-- **Visual audio patching** with Helvum
-- **OBS integration** with virtual sinks
-- **Noise suppression** for streaming
+## Installation
 
-### 🤖 **J.A.R.V.I.S. Integration**
-- **Custom sound pack** with character voice lines
-- **Smart notifications** for system events
-- **Gaming mode announcements**
-- **Temperature warnings** with themed alerts
-
----
-
-## 📋 System Requirements
-
-| Component | Requirement | Status |
-|-----------|-------------|--------|
-| **OS** | Arch Linux | ✅ |
-| **DE** | Hyprland | ✅ |
-| **GPU** | AMD RX 580 (or similar) | ✅ |
-| **RAM** | 8GB+ (16GB recommended) | ✅ |
-| **Storage** | 20GB+ free space | ✅ |
-
----
-
-## 🚀 Quick Installation
-
-### Method 1: Automated Setup (Recommended)
+### Fresh Arch Install
+1. Install Arch Linux
+2. Run Chris Titus Linutil for base setup
+3. Install ML4W dotfiles:
 ```bash
-# Clone the repository
-git clone https://github.com/Crowdrocker/Snaps-Dots.git
-cd Snaps-Dots
-
-# Run the installer
-chmod +x install.sh
-./install.sh
+   git clone --depth=1 https://gitlab.com/stephan-raabe/dotfiles.git ~/ml4w-dotfiles
+   cd ~/ml4w-dotfiles
+   ./setup.sh
 ```
-
-### Method 2: Manual Installation
+4. Clone this repo and copy over:
 ```bash
-# Install dependencies
-sudo pacman -S hyprland waybar kitty thunar
-
-# Copy configurations
-cp -r configs/* ~/.config/
-
-# Install custom scripts
-cp -r scripts/* ~/.local/bin/
-chmod +x ~/.local/bin/*
-
-# Set up themes
-cp -r themes/* ~/.local/share/themes/
+   git clone https://github.com/yourusername/my-hyprland-dotfiles.git
+   cp -r my-hyprland-dotfiles/* ~/.mydotfiles/
 ```
-
----
-
-## 📸 Screenshots
-
-<details>
-<summary>Click to expand screenshots</summary>
-
-### Desktop Overview
-![Desktop](screenshots/desktop.png)
-
-### Gaming Setup
-![Gaming](screenshots/gaming.png)
-
-### Creative Workflow
-![Creative](screenshots/creative.png)
-
-### Audio Routing
-![Audio](screenshots/audio-routing.png)
-
-### Terminal
-![Terminal](screenshots/terminal.png)
-
-</details>
-
----
-
-## ⌨️ Keybindings
-
-### 🖥️ System Control
-| Shortcut | Action |
-|----------|--------|
-| `Super + Return` | Terminal (Kitty) |
-| `Super + E` | File Manager |
-| `Super + R` | App Launcher |
-| `Super + Q` | Close Window |
-| `Super + Shift + Q` | Exit Hyprland |
-
-### 🎮 Gaming
-| Shortcut | Action |
-|----------|--------|
-| `Super + G` | Steam |
-| `Super + Shift + G` | Lutris |
-| `Super + Ctrl + G` | Gaming Mode Toggle |
-| `Super + H` | Heroic Games |
-
-### 📸 Creative
-| Shortcut | Action |
-|----------|--------|
-| `Super + I` | Inkscape |
-| `Super + Shift + I` | GIMP |
-| `Super + Ctrl + I` | Krita |
-| `Super + B` | Blender |
-
-### 🎥 Streaming
-| Shortcut | Action |
-|----------|--------|
-| `Super + O` | OBS Studio |
-| `Super + Shift + O` | Streaming Mode |
-| `Super + M` | Audio Mixer |
-
-### 🖼️ Screenshots
-| Shortcut | Action |
-|----------|--------|
-| `Print` | Full Screenshot |
-| `Super + Print` | Area Screenshot |
-| `Super + Shift + S` | Screen Recording |
-
----
-
-## 🎮 Gaming Setup
-
-### Steam Configuration
-1. **Enable Proton for all titles**
-2. **Add launch options**:
-   ```bash
-   # For most games
-   gamemoderun mangohud RADV_PERFTEST=sam %command%
-   
-   # For Proton games  
-   gamemoderun mangohud DXVK_ASYNC=1 RADV_PERFTEST=sam %command%
-   ```
-
-### Lutris Setup
-- **DXVK Async**: Enabled
-- **RADV optimizations**: Active
-- **Esync/Fsync**: Enabled
-- **GameMode**: Auto-activation
-
-### Performance Tips
-- **AMD RX 580**: Optimized RADV drivers
-- **Temperature monitoring**: Automatic warnings
-- **Fan control**: CoreCtrl integration
-- **Memory**: ZRAM configuration
-
----
-
-## 🎵 Audio Setup
-
-### PipeWire Configuration
-The setup includes advanced audio routing similar to VoiceMeeter:
-
-```bash
-# Available virtual sinks
-- Games Audio (for gaming sounds)
-- Discord Audio (voice chat)
-- Spotify Audio (music)
-- Browser Audio (web content)
-```
-
-### Visual Audio Routing
-- **Helvum**: Easy drag-and-drop connections
-- **qpwgraph**: Advanced routing control
-- **pavucontrol**: Traditional mixer interface
-
-### Streaming Integration
-- **OBS ready**: Pre-configured audio sources
-- **Noise suppression**: Real-time processing
-- **Multiple outputs**: Hardware + virtual routing
-
----
-
-## 📁 File Structure
-
-```
-Snaps-Dots/
-├── configs/
-│   ├── hypr/           # Hyprland configuration
-│   ├── waybar/         # Status bar themes
-│   ├── kitty/          # Terminal configuration
-│   ├── fuzzel/         # App launcher
-│   └── ...
-├── scripts/
-│   ├── install.sh      # Main installer
-│   ├── jarvis-sound    # Sound system
-│   ├── gaming-mode     # Gaming optimizations
-│   └── ...
-├── wallpapers/         # WehttamSnaps branded wallpapers
-├── sounds/             # J.A.R.V.I.S. sound pack
-├── themes/             # GTK/Qt themes
-└── screenshots/        # Setup screenshots
-```
-
----
-
-## 🛠️ Customization
-
-### Brand Colors
-```css
-/* WehttamSnaps Color Palette */
---primary: #8A2BE2;    /* Blue Violet */
---secondary: #00FFFF;  /* Cyan */
---accent: #0066CC;     /* Deep Blue */
---highlight: #FF69B4;  /* Hot Pink */
-```
-
-### Wallpapers
-Custom gradient wallpapers are auto-generated using your brand colors. Add your own to `wallpapers/` directory.
-
-### Sounds
-Replace J.A.R.V.I.S. sounds in `sounds/jarvis/` with your own audio files.
-
----
-
-## 🆘 Troubleshooting
-
-### Common Issues
-
-<details>
-<summary>Hyprland won't start</summary>
-
-```bash
-# Check logs
-journalctl --user -u hyprland
-
-# Reset configuration
-cp configs/hypr/hyprland.conf ~/.config/hypr/
-```
-</details>
-
-<details>
-<summary>Audio not working</summary>
-
-```bash
-# Restart PipeWire
-systemctl --user restart pipewire pipewire-pulse
-
-# Run audio setup
-./scripts/setup-audio-routing
-```
-</details>
-
-<details>
-<summary>Gaming performance issues</summary>
-
-```bash
-# Check GameMode status
-gamemoderun --help
-
-# Verify GPU drivers
-lspci -k | grep -A 3 VGA
-
-# Monitor temperatures
-sensors
-```
-</details>
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Whether it's:
-- 🐛 **Bug fixes**
-- ✨ **New features**  
-- 📚 **Documentation improvements**
-- 🎨 **Theme variations**
-
-### How to Contribute
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **JaKooLit** - Base Hyprland configuration inspiration
-- **Hyprland Community** - Amazing window manager
-- **Arch Linux** - The foundation of it all
-- **AMD** - Great open-source GPU drivers
-
----
-
-## 📞 Contact
-
-- **GitHub**: [@Crowdrocker](https://github.com/Crowdrocker)
-- **Twitch**: [WehttamSnaps](https://twitch.tv/wehttamsnaps)
-- **YouTube**: [WehttamSnaps](https://youtube.com/@wehttamsnaps)
-
----
-
-<div align="center">
-  
-**⭐ Star this repo if you found it helpful!**
-
-*Built with ❤️ for the Linux community*
+5. Reboot
+
+## Key Customizations
+- Gaming mode script in `.config/hypr/scripts/gaming-mode.sh`
+- Custom keybinds in `.config/hypr/hyprland.conf`
+- AMD-specific optimizations
+
+## Notes
+- Dotfiles are symlinked from `~/.mydotfiles` to `~/.config`
+- Uses ML4W settings app for easy configuration
 
 </div>
 ## 🫰	Thank you for the stars 🩷
