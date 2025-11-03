@@ -76,7 +76,7 @@ Personal Hyprland setup based on ML4W dotfiles with custom modifications.
 ```
 4. Clone this repo and copy over:
 ```bash
-   git clone https://github.com/yourusername/my-hyprland-dotfiles.git
+   git clone https://github.com/Crowdrocker/my-hyprland-dotfiles.git
    cp -r my-hyprland-dotfiles/* ~/.mydotfiles/
 ```
 5. Reboot
@@ -94,4 +94,4 @@ Personal Hyprland setup based on ML4W dotfiles with custom modifications.
 ## 🫰	Thank you for the stars 🩷
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Crowdrocker/Hypr-Snaps.git&type=Date)](https://www.star-history.com/#Crowdrocker/Hypr-Snaps.git&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Crowdrocker/my-hyprland-dotfiles.git&type=Date)](https://www.star-history.com/#Crowdrocker/Hypr-Snaps.git&Date)
